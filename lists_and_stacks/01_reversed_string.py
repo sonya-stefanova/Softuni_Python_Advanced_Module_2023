@@ -28,3 +28,11 @@ while stack:
     stack.pop()
 
 print(reversed_string)
+
+
+# Solution without stack
+# input_line = input()
+#
+# reversed_string = "".join(list(reversed(input_line)))
+#
+# print(reversed_string)
