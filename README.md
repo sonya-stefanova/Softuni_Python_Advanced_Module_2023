@@ -1,4 +1,4 @@
-<h1>Softuni Python Advanced Course</h1>
+<h1>----Softuni Python Advanced Course----</h1>
 <p>The course focuses on manipulating data and writing programs laying on:</p>
 <ul>
 
