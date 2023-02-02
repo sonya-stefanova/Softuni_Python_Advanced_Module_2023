@@ -1,36 +1,25 @@
 def forecast(*args):
-    weather_forecast_dict = {
+
+    dict_of_forecasts = {
         'Sunny': [],
         'Cloudy': [],
-        'Rainy': [],
+        'Rainy': []
     }
 
-    for town, weather in args:
-        weather_forecast_dict[weather].append(town)
+    for location, forecast in args: #tuple
+        dict_of_forecasts[forecast].append(location)
 
     result = ''
-
-    for weather, list_of_towns in weather_forecast_dict.items():
-        for town in sorted(list_of_towns):
-            result += f'{town} - {weather}\n'
+    for forecast, list_of_locations in dict_of_forecasts.items():
+        for location in sorted(list_of_locations):
+            result += f'{location} - {forecast}\n'
 
     return result
+
+
 
 
 print(forecast(
     ("Sofia", "Sunny"),
     ("London", "Cloudy"),
     ("New York", "Sunny")))
-
-print(forecast(
-    ("Beijing", "Sunny"),
-    ("Hong Kong", "Rainy"),
-    ("Tokyo", "Sunny"),
-    ("Sofia", "Cloudy"),
-    ("Peru", "Sunny"),
-    ("Florence", "Cloudy"),
-    ("Bourgas", "Sunny")))
-
-print(forecast(
-    ("Tokyo", "Rainy"),
-    ("Sofia", "Rainy")))
