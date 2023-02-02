@@ -1,6 +1,7 @@
 def shopping_cart(*args):
     result = ''
     is_empty = 0
+
     meals = {
         'Soup': set(),
         'Pizza': set(),

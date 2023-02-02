@@ -7,7 +7,7 @@ def add_songs(*args):
             for line in lyrics:
                 songs[song].append(line)
 
-    result = " "
+    result = ""
 
     for song, lyrics in songs.items():
         result += f'- {song}\n'
