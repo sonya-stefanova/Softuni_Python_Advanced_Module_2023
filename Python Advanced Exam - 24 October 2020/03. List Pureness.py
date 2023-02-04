@@ -1,25 +1,22 @@
-def numbers_searching(*args):
-    result = []
-    missing_num = None
-    dublicates = set()
-    min_num = min(args)
-    max_num = max(args)
+from collections import deque
 
-    for num in range(min_num, max_num+1):
-        if args.count(num) == 0:
-            missing_num = num
-        elif args.count(num) > 1:
-            dublicates.add(num)
-
-    result.append(missing_num)
-    list_of_dublicates = list(sorted(dublicates))
-
-    result.append(list_of_dublicates)
-    return result
+def best_list_pureness(numbers_list, rotations):
+    numbers_list = deque(numbers_list)
+    best_pureness_dict = {}
 
 
-print(numbers_searching(1, 2, 4, 2, 5, 4))
-print(numbers_searching(5, 5, 9, 10, 7, 8, 7, 9))
-print(numbers_searching(50, 50, 47, 47, 48, 45, 44, 47, 45, 44, 44, 48, 44, 48))
-print(numbers_searching(1, 2, 3, 4, 2, 5, 4))
-print(numbers_searching(1, 2, 4, 5))
+    for curr_rotation in range(rotations + 1):
+        pureness = 0
+
+        for idx, num in enumerate(numbers_list):
+            pureness += num * idx
+
+        best_pureness_dict[curr_rotation] = pureness
+        numbers_list.rotate(1)
+
+    for rotations, pureness_ in sorted(best_pureness_dict.items(), key=lambda x: -x[1]):
+        return f'Best pureness {pureness_} after {rotations} rotations'
+
+test = ([1, 2, 3, 4, 5], 10)
+result = best_list_pureness(*test)
+print(result)

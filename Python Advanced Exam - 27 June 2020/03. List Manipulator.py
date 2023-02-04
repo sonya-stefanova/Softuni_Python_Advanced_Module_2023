@@ -3,9 +3,11 @@ def list_manipulator(list_of_numbers, first_command, second_command, *args):
         args = list(args)
         args.extend(list_of_numbers)
         return args
+
     elif first_command == 'add' and second_command == 'end':
         list_of_numbers.extend(args)
         return list_of_numbers
+
     elif first_command == 'remove' and second_command == 'beginning':
         if args:
             num = args[0]
@@ -14,6 +16,7 @@ def list_manipulator(list_of_numbers, first_command, second_command, *args):
         else:
             list_of_numbers.pop(0)
         return list_of_numbers
+
     elif first_command == 'remove' and second_command == 'end':
         if args:
             num = args[0]
