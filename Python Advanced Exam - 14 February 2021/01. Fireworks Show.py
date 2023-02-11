@@ -14,7 +14,8 @@ fireworks = {
 
 while True:
 
-    if fireworks['Palm Fireworks'] >= 3 and fireworks['Willow Fireworks'] >= 3 and fireworks['Crossette Fireworks'] >= 3:
+    if fireworks['Palm Fireworks'] >= 3 and fireworks['Willow Fireworks'] >= 3 \
+            and fireworks['Crossette Fireworks'] >= 3:
         is_done = True
         break
     if not firework_effects or not explosive_power:

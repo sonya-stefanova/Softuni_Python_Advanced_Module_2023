@@ -1,5 +1,6 @@
 rows, cols = [int(x) for x in input().split()]
 word = input()
+
 index = 0
 for row in range(rows):
     row_elements = [None]*cols

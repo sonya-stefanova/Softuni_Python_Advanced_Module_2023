@@ -44,3 +44,4 @@ if females:
     print(f"Females left: {', '.join(str(x) for x in females)}")
 else:
     print(f"Females left: none")
+
