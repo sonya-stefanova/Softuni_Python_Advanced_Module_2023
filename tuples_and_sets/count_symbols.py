@@ -8,5 +8,5 @@ for symbol in sentence:
     dict_of_symbols[symbol] += 1
 
 
-for kvp in sorte    d(dict_of_symbols.items()):
+for kvp in sorted(dict_of_symbols.items()):
     print(f'{kvp[0]}: {kvp[1]} time/s')

@@ -11,7 +11,7 @@ for row in range(rows):
             row_elements[col] = word[index % len(word)]
             index+=1
     else:
-        for col in range(cols-1, -1, -1):
+        for col in range(cols -1, -1, -1):
             row_elements[col] = word[index % len(word)]
             index += 1
     print(*row_elements, sep='')
