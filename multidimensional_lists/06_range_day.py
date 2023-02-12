@@ -50,6 +50,7 @@ for _ in range(n):
         matrix[start_row][start_col] = '.'
         start_row, start_col = next_row, next_col
         matrix[start_row][start_col] = 'A'
+
     elif command == 'shoot':
         bullet_row, bullet_col = start_row, start_col
         while True:

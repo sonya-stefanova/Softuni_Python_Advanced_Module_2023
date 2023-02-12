@@ -22,7 +22,6 @@ commands = input().split()
 matrix = []
 
 total_coals = 0
-
 miner_row = 0
 miner_col = 0
 

@@ -64,6 +64,7 @@ for direction, next_step in directions.items():
             best_score = current_score
             best_direction = direction
             best_path = current_path
+
 print(best_direction)
 print(*best_path, sep='\n')
 print(best_score)

@@ -18,7 +18,6 @@ def read_neighbours(matrix, row_bomb, col_bomb):
 
 
 size = int(input())
-
 matrix = []
 
 for r in range(size):
@@ -29,15 +28,15 @@ bombs_coordinates = input().split()
 for bomb in bombs_coordinates:
     row_bomb, col_bomb = [int(x) for x in bomb.split(',')]
 
-    explode_bomb = matrix[row_bomb][col_bomb]
+    explode_bomb_value = matrix[row_bomb][col_bomb]
 
-    if explode_bomb <= 0:
+    if explode_bomb_value <= 0:
         continue
 
     neighbors = read_neighbours(matrix, row_bomb, col_bomb)
 
     for r, c in neighbors:
-        matrix[r][c] -= explode_bomb
+        matrix[r][c] -= explode_bomb_value
 
     matrix[row_bomb][col_bomb] = 0
 

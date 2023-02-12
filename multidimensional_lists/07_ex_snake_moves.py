@@ -4,7 +4,6 @@ word = input()
 index = 0
 for row in range(rows):
     row_elements = [None]*cols
-
     if row % 2 == 0:
         for col in range(cols):
          #0 is even number
