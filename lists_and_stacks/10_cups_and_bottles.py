@@ -3,8 +3,6 @@
 # 3 15 15 11 6 bottles = You must start picking from the last received bottle
 from collections import deque
 
-from collections import deque
-
 
 cups = deque([int(x) for x in input().split()])
 bottles = [int(x) for x in input().split()]

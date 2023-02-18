@@ -18,22 +18,16 @@ def find_count(row, col, matrix):
         result+=1
     if is_inside(row - 2, col + 1, len(matrix)) and is_knight(row - 2, col + 1, matrix):
         result+=1
-
     if is_inside(row - 1, col - 2, len(matrix)) and is_knight(row - 1, col - 2, matrix):
         result+=1
-
     if is_inside(row - 1, col + 2, len(matrix)) and is_knight(row - 1, col + 2, matrix):
         result+=1
-
     if is_inside(row + 1, col - 2, len(matrix)) and is_knight(row + 1, col - 2, matrix):
         result+=1
-
     if is_inside(row + 1, col + 2, len(matrix)) and is_knight(row + 1, col + 2, matrix):
         result+=1
-
     if is_inside(row + 2, col - 1, len(matrix)) and is_knight(row + 2, col - 1, matrix):
         result+=1
-
     if is_inside(row + 2, col + 1, len(matrix)) and is_knight(row + 2, col + 1, len(matrix)):
         result+=1
     return result

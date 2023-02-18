@@ -19,6 +19,7 @@ bombs_are_crafted = False
 while bombs_effects and bombs_casings:
     bomb_effect = bombs_effects.popleft()
     bomb_casing = bombs_casings.pop()
+
     total_sum = bomb_effect + bomb_casing
 
     if total_sum == 40:
@@ -42,6 +43,7 @@ if bombs_are_crafted:
     print("Bene! You have successfully filled the bomb pouch!")
 else:
     print("You don't have enough materials to fill the bomb pouch.")
+
 if bombs_effects:
     print(f"Bomb Effects: {', '.join([str(x) for x in bombs_effects])}")
 else:

@@ -14,7 +14,7 @@ def best_list_pureness(numbers_list, rotations):
         best_pureness_dict[curr_rotation] = pureness
         numbers_list.rotate(1)
 
-    for rotations, pureness_ in sorted(best_pureness_dict.items(), key=lambda x: -x[1]):
+    for rotations, pureness_ in sorted(best_pureness_dict.items(), key=lambda x: -x[1], x[0]):
         return f'Best pureness {pureness_} after {rotations} rotations'
 
 test = ([1, 2, 3, 4, 5], 10)

@@ -4,6 +4,7 @@ from collections import deque
 customers = deque([int(x) for x in input().split(", ")])
 taxies = [int(x) for x in input().split(", ")]
 total_time = 0
+
 while True:
     if not customers or not taxies:
         break

@@ -49,5 +49,6 @@ if firework_effects:
     print(f"Firework Effects left: {', '.join(str(x) for x in firework_effects)}")
 if explosive_power:
     print(f"Explosive Power left: {', '.join(str(x) for x in explosive_power)}")
+
 for key, value in fireworks.items():
     print(f"{key}: {value}")

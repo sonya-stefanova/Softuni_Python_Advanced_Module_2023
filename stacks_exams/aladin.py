@@ -3,6 +3,7 @@ from collections import deque
 
 materials = [int(x) for x in input().split()]
 magic_levels = deque(int(x) for x in input().split())
+
 gifts_collection = {
     'Gemstone': 0,
     'Porcelain Sculpture': 0,

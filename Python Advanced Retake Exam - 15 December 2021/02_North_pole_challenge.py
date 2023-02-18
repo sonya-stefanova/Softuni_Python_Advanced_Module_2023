@@ -22,7 +22,7 @@ def is_outside(rows, cols, my_pos_row, my_pos_col):
         return my_pos_row, my_pos_col
 
 
-def check_for_item_collection(matrix, my_pos_row, my_pos_col, gifts):
+def items_collection_in_dictionary(matrix, my_pos_row, my_pos_col, gifts):
     if matrix[my_pos_row][my_pos_col] == "D":
         gifts['decorations'] += 1
     elif matrix[my_pos_row][my_pos_col] == "G":
@@ -43,7 +43,7 @@ collected_items = {
     'decorations': 0,
     'gifts': 0,
     'cookies': 0
-                   }
+    }
 
 for row in range(rows):
     row_elements = input().split()
@@ -70,7 +70,7 @@ while command != 'End':
         if is_outside:
             curr_row, curr_col = is_outside(rows, cols, curr_row, curr_col)
 
-            check_for_item_collection(santa_matrix, curr_row, curr_col, collected_items)
+            items_collection_in_dictionary(santa_matrix, curr_row, curr_col, collected_items)
             santa_matrix[curr_row][curr_col] = 'x'
 
             if sum(collected_items.values()) == total_items:

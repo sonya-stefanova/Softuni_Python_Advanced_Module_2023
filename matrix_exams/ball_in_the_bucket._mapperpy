@@ -1,0 +1,41 @@
+import re, sys
+def is_valid(row, col, size):
+    return 0 <= row < size and 0 <= col < size
+
+SIZE= 6
+prize_mapper = {
+    "Football": range(100, 200),
+    "Teddy Bear": range(200, 300),
+    "Lego Construction Set": range(300, sys.maxsize)
+}
+
+def get_prize(mapper, total):
+    for k, v in mapper.items():
+        if total in v:
+            return k
+    return None
+
+scored_points = 0
+
+matrix = [[int(x) if x.isdigit() else x for x in input().split()] for row in range(SIZE)]
+
+total_result = 0
+throws = 3
+
+for throw in range(throws):
+    pattern = r"\d+"
+    row, col = [int(x) for x in re.findall(pattern, input())]
+    ##     row, col = [int(x) for x in input()[1:-1].split(", ")]
+
+
+    if is_valid(row, col, SIZE) and matrix[row][col] == "B":
+        matrix[row][col] = 0
+        for r in range(SIZE):
+            total_result += matrix[r][col]
+
+prize = get_prize(prize_mapper, total_result)
+
+if prize:
+    print(f"Good job! You scored {total_result} points, and you've won {prize}.")
+else:
+    print(f"Sorry! You need {abs(100-total_result)} points more to win a prize.")

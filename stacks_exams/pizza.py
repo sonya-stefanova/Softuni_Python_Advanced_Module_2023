@@ -2,6 +2,7 @@ from collections import deque
 
 pizzas = deque([int(x) for x in input().split(", ")])
 employees = [int(x) for x in input().split(", ")]
+
 counter = 0
 while pizzas and employees:
     pizza_nums = pizzas.popleft()

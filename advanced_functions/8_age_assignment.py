@@ -17,7 +17,7 @@ def age_assignment(*args, **kwargs):
     result = {}
     for name in args:
         for letter, age in kwargs.items():
-            if letter in name:
+            if name.startswith(letter):
                 result.update({name: age})
     sorted_result = [f'{key} is {value} years old.' for key, value in sorted(result.items())]
     return '\n'.join(sorted_result)
